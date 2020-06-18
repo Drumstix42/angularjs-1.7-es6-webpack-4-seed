@@ -22,6 +22,16 @@ module.exports = (storybookBaseConfig, configType) => {
           test: /\.scss$/,
           loaders: ["style-loader", "css-loader", "sass-loader"],
           include: path.resolve(__dirname, "../")
+        },
+        {
+          test: /\.m?js$/,
+          exclude: /(node_modules|bower_components)/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env']
+            }
+          }
         }
       ]
     } 

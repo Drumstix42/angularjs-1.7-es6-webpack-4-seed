@@ -3,12 +3,17 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
 
 module.exports = {    
-    devtool: 'source-map', // for debug purposes on production
+    devtool: 'source-map',
     module: {
         rules: [
             {
                 test: /\.html$/,
-                use: [{ loader: 'html-loader', options: { minimize: true } }]
+                use: [
+                    { 
+                        loader: 'html-loader',
+                        options: { minimize: true }
+                    }
+                ]
             },
             {
                 test: /\.(png|jpe?g)/i,
@@ -38,9 +43,6 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: [
-                    {
-                        loader: 'ng-annotate-loader'
-                    },
                     {
                         loader: 'babel-loader'
                     }

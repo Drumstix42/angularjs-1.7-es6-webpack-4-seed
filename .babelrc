@@ -1,5 +1,11 @@
 {
     "presets": [
-        "env"
-    ]
-}
+        // "env",
+        "@babel/preset-env"
+    ],
+      "plugins": [
+          // By default, this plugin will attempt to add annotations to common AngularJS code patterns.
+          // This behavior can be disabled (requiring you to mark up functions with /* @ngInject */ or 'ngInject')
+          ["angularjs-annotate", { "explicitOnly" : false }]
+      ]
+  }

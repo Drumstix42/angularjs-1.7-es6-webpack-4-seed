@@ -3,7 +3,6 @@ export default ngModule => {
         require('./sample-component.test').default(ngModule);
     }
     require('./sample-component.scss');
-    // declare $log in array for production... if we don't use ng-annotate-loader
     ngModule.directive('sampleComponent', ($log) => { 
         return {
             restrict: 'E',
