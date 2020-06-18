@@ -1,6 +1,6 @@
-# AngularJS 1.7 based on ES6 syntax and Webpack 4 with Storybook.js
+# AngularJS 1.8 based on ES6 syntax and Webpack 4
 
-This repo contains webpack 4, AngularJS 1.7, ES6 and Storybook.js.
+This repo contains AngularJS 1.8, Webpack 4, ES6 and Babel.
 
 ## Features
 
@@ -9,8 +9,6 @@ This repo contains webpack 4, AngularJS 1.7, ES6 and Storybook.js.
 + Source map for debugging
 + Loading Base64 URL for optimizing images
 + Ng-Annotate-Loader for annotating angular application
-
-![storybooks](https://user-images.githubusercontent.com/1332366/50943139-2e1fed80-1459-11e9-9d07-6b2c86cafa02.gif)
 
 
 ## Getting Started 

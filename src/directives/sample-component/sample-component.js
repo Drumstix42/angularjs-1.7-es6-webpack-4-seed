@@ -1,5 +1,5 @@
 export default ngModule => {
-    if ( ON_TEST ) {
+    if ( TEST_MODE ) {
         require('./sample-component.test').default(ngModule);
     }
     require('./sample-component.scss');

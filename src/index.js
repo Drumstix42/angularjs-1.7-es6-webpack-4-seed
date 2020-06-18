@@ -3,7 +3,7 @@ import registerDirectives from './directives';
 
 import style from './assets/scss/main.scss';
 
-if ( ON_TEST ) {
+if ( TEST_MODE ) {
     require('angular-mocks/angular-mocks');
 }
 
