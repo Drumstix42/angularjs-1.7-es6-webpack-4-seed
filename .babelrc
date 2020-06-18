@@ -3,9 +3,29 @@
         // "env",
         "@babel/preset-env"
     ],
-      "plugins": [
-          // By default, this plugin will attempt to add annotations to common AngularJS code patterns.
-          // This behavior can be disabled (requiring you to mark up functions with /* @ngInject */ or 'ngInject')
-          ["angularjs-annotate", { "explicitOnly" : false }]
-      ]
-  }
+    "plugins": [
+        [
+            // By default, this plugin will attempt to add annotations to common AngularJS code patterns.
+            // This behavior can be disabled (requiring you to mark up functions with /* @ngInject */ or 'ngInject')
+            // https://www.npmjs.com/package/babel-plugin-angularjs-annotate
+            "angularjs-annotate",
+            {
+                "explicitOnly": false
+            }
+        ],
+        [
+            // https://www.npmjs.com/package/babel-plugin-ng-hot-reload
+            "babel-plugin-ng-hot-reload",
+            {
+                // TODO: determine if this should be `true`
+                "angularGlobal": false,
+                "forceRefresh": true,
+                // If true, the library attempts to preserve some state in scope and controller instances when they are reloaded.
+                // Preserving state is an experimental feature and quite "hackish" so it may cause problems in some cases.
+                // Setting this to false might help if you run into weird errors.
+                "preserveState": true,
+                "angularReference": "require('angular'), angular"
+            }
+        ]
+    ]
+}
